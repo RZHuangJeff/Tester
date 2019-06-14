@@ -26,12 +26,12 @@ private:
 
 template <class T1, class T2>
 void Assert::isEqual(T1 t1, T2 t2){
-  pass = t1 == t2 ? pass : false;
+  pass = pass ? t1 == t2 : pass;
 }
 
 template <class T1, class T2>
 void Assert::isNotEqual(T1 t1, T2 t2){
-  pass = !(t1 == t2) ? pass : false;
+  pass = pass ? !(t1 == t2) : pass;
 }
 
 #endif

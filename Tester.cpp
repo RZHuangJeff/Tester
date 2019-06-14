@@ -7,11 +7,11 @@ using namespace std;
 bool Assert::pass;
 
 void Assert::isTrue(bool statement){
-  pass = statement ? pass : false;
+  pass = pass ? statement : pass;
 }
 
 void Assert::isFalse(bool statement){
-  pass = !statement ? pass : false;
+  pass = pass ? !statement : pass;
 }
 
 string Assert::isPass(){
